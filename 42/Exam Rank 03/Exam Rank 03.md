@@ -11,7 +11,7 @@
 | filter   | stdin + pattern | 0 → 1      |
 | gnl      | lecture ligne   | fd fichier |
 
-Le niveau 1 est consitué de 2 exercice il y'a [[42/Exam Rank 03/filter|filter]] et [[42/Exam Rank 03/broken_GNL|broken_GNL]], ils sont basé sur la lecture soit par file descriptore ou depuis la ligne de commande ou soit direcment depuis un fichier.
+Le niveau 1 est consitué de 2 exercice il y'a [[filter|filter]] et [[broken_GNL|broken_GNL]], ils sont basé sur la lecture soit par file descriptore ou depuis la ligne de commande ou soit direcment depuis un fichier.
 ### gnl
 - Buffer statique
 - Retourne une ligne à la fois
