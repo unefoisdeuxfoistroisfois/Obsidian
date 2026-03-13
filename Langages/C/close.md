@@ -49,7 +49,7 @@ close(fd);  // Toujours fermer !
 ```c
 fd = open("fichier.txt", O_RDONLY);
 read(fd, buffer, 100);
-// Pas de close(fd) → fuite de ressources
+// Pas de close(fd) -> fuite de ressources
 ```
 
 ---
