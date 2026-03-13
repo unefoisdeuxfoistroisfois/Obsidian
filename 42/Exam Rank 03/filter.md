@@ -66,7 +66,7 @@ if (argc != 2 || argv[1][0] == '\0')
     return (1);
 ```
 
-⚠️ C'est `'\0'` (caractère nul), pas `'0'` (le chiffre zéro) !
+C'est `'\0'` (caractère nul), pas `'0'` (le chiffre zéro) !
 
 ---
 
