@@ -1,5 +1,5 @@
+.DS_Store
+
 # Ignore le derniere etat de notre fichier.
 .obsidian/workspace.json
 
-# macOS
-.DS_Store
