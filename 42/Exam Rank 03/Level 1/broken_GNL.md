@@ -164,7 +164,6 @@ else
 
 ## Voir aussi
 
-- [[read]] — Lire des données
 - [[open]] — Ouvrir un fichier
 - [[close]] — Fermer un fichier
 - [[File descriptors]] — Les fd expliqués
