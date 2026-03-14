@@ -126,7 +126,7 @@ write(0, newstr, resread);  // 0 = stdin (entrée, pas sortie)
 ```c
 fd = open("test.txt", O_RDONLY);
 read(fd, buffer, 100);
-// Pas de close(fd) → fuite de ressources
+// Pas de close(fd) -> fuite de ressources
 ```
 
 ### Corrections
