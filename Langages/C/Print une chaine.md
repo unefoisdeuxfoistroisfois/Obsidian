@@ -125,11 +125,3 @@ str[3] = 'l';
 str[4] = 'o';
 puts(str);  // Pas de '\0' -> comportement indéfini !
 ```
-
----
-
-## Voir aussi
-
-- [[write]] — Écrire des données
-- [[quand_mettre_le_'\0']] — Quand ajouter le '\0'
-- [[file_descriptors]] — Les fd expliqués
