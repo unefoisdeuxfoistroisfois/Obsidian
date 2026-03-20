@@ -21,7 +21,7 @@ A 42 on utilise [intranet](https://intra.42.fr) pour avoir acces au projet.
 
 **Cercle 3 :**
 - [x] Philosophers
-- [ ] [[42/minishell|minishell]]
+- [ ] [[minishell|minishell]]
 - [ ] [[42/Exam Rank 03/Exam Rank 03|Exam Rank 03]]
 
 **Cercle 4 :**
