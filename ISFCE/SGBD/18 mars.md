@@ -31,12 +31,16 @@ Ne pas oublier de regarder la vidéo pour installer JavaFX.
 - Si on veut que VS Code utilise le `settings.json` à la place, il faut supprimer le `.classpath`
 - J'ai dû adapter le `.classpath` du prof pour y ajouter le chemin vers le SDK JavaFX local
 
+### e(fx)clipse (Eclipse) = launch.json (VS Code)
+- e(fx)clipse est un plugin Eclipse qui configure automatiquement `--module-path` et `--add-modules` pour JavaFX et génère les configs de lancement en quelques clics
+- Dans VS Code on fait la même chose manuellement via le `launch.json` -> pas besoin d'e(fx)clipse
+
 ### launch.json (spécifique à VS Code) — uniquement pour JavaFX
 - Eclipse stocke sa config de lancement dans un `.launch` (dans le workspace Eclipse, pas dans le projet)
 - VS Code a besoin d'un `.vscode/launch.json` dans le projet
 - Le `launch.json` passe des VM args à la JVM pour lui indiquer où trouver les modules JavaFX :
-  - `--module-path` → chemin vers les JARs du SDK JavaFX
-  - `--add-modules` → modules JavaFX à charger (javafx.controls, javafx.fxml, javafx.graphics)
+  - `--module-path` -> chemin vers les JARs du SDK JavaFX
+  - `--add-modules` -> modules JavaFX à charger (javafx.controls, javafx.fxml, javafx.graphics)
 
 ```json
 {
@@ -60,27 +64,27 @@ En gros, JavaFX a besoin d'arguments, il faut lui en donner — notre `launch.js
 
 - Fichier de configuration Eclipse, lu aussi par le Java Language Server de VS Code
 - Décrit le projet à l'IDE (nom, type, builders)
-- **Sans ce fichier correctement configuré, VS Code ne reconnaît pas le projet comme Java → tout est rouge**
+- **Sans ce fichier correctement configuré, VS Code ne reconnaît pas le projet comme Java -> tout est rouge**
 
 ### Structure clé
-- `<name>` → nom du projet dans l'IDE
-- `<buildSpec>` → définit `org.eclipse.jdt.core.javabuilder` (compile le Java)
-- `<natures>` → définit `org.eclipse.jdt.core.javanature` (indique que c'est un projet Java)
-- `<filteredResources>` → dossiers/fichiers ignorés (`node_modules`, `.git`, etc.)
+- `<name>` -> nom du projet dans l'IDE
+- `<buildSpec>` -> définit `org.eclipse.jdt.core.javabuilder` (compile le Java)
+- `<natures>` -> définit `org.eclipse.jdt.core.javanature` (indique que c'est un projet Java)
+- `<filteredResources>` -> dossiers/fichiers ignorés (`node_modules`, `.git`, etc.)
 
 ### Ce qu'on a dû corriger
 Le `.project` fourni par le prof n'avait pas le builder ni la nature Java (balises vides).
-On les a ajoutés manuellement → VS Code a ensuite reconnu le projet correctement.
+On les a ajoutés manuellement -> VS Code a ensuite reconnu le projet correctement.
 
 > Si VS Code reste en rouge après modification du `.project` :
-> `Ctrl+Shift+P` → **"Java: Clean Java Language Server Workspace"**
+> `Ctrl+Shift+P` -> **"Java: Clean Java Language Server Workspace"**
 
 ## Fichiers de configuration Eclipse / VS Code Java
 
 ### `.project`
 - Carte d'identité du projet pour l'IDE
 - Contient le nom du projet, le type (nature) et le builder
-- Sans `javanature` + `javabuilder` → l'IDE ne reconnaît pas le projet comme Java → tout est rouge
+- Sans `javanature` + `javabuilder` -> l'IDE ne reconnaît pas le projet comme Java -> tout est rouge
 
 ```xml
 <buildSpec>
@@ -100,6 +104,6 @@ On les a ajoutés manuellement → VS Code a ensuite reconnu le projet correctem
 - VS Code lit le `.classpath` en priorité avant le `java.project.referencedLibraries` du `settings.json`
 
 ### Git
-- `.project` → **à commiter** (tout le monde en a besoin)
-- `.classpath` → **à commiter** (tout le monde en a besoin)
-- `.vscode/` → **à ignorer** (spécifique VS Code, contient des chemins locaux)
+- `.project` -> **à commiter** (tout le monde en a besoin)
+- `.classpath` -> **à commiter** (tout le monde en a besoin)
+- `.vscode/` -> **à ignorer** (spécifique VS Code, contient des chemins locaux)
